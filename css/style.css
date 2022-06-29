@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=IBM+Plex+Sans:wght@300&display=swap');
+
+/* reset */
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/* selectores de etiqueta */
+
+h1{
+    color: #472b07;
+    font-weight: 5000;
+}
+
+ul{
+    color: rgb(70, 52, 4);
+    display: inline-block;
+}
+
+h3{
+    color: rgb(70, 52, 4);
+}
+
+h1,
+h3{
+    font-family: 'Amatic SC', cursive;
+    font-size: 2.5rem;
+}
+
+p{
+    font-family: 'Amatic SC', cursive;
+    font-size: 1rem;
+}
+
+body{
+    background-image: url(../img/fondo.png);
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+nav{
+    background-color:  rgb(250, 235, 215, 0.5);
+    padding: 20px 50px;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+    nav h1{
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    }
+
+        nav ul li{
+        display: inline-block;
+        margin: 0 8px;
+        }
+
+    nav ul{
+        list-style: none;
+        float: right;
+        padding-top: 10px;
+        padding-bottom: 6px;
+        margin: 0;
+    }
+                nav ul li a{
+                color: rgb(70, 52, 4);
+                text-decoration: none;
+                font-family: 'Amatic SC', cursive;
+                font-size: 1.5rem;
+                display: inline-block !important;
+                }
+
+    nav img{
+    width: 50px;
+    height: 50px;
+    }
+
+/* selectores de clase */
+
+.banner img{
+    width: 100%;
+
+}
+
+.text-center{
+    display: flex;
+    margin: 1.5rem 0 1.5rem 0;
+    justify-content: center;
+}
+
+.sobre_moka h1{
+    text-align: center;
+}
+
+.sobre_moka h2{
+    text-align: center;
+    color: rgb(70, 52, 4);
+    font-family: 'Amatic SC', cursive;
+    font-size: 2.3rem;
+}
+
+.sobre_moka article{
+    text-align: center;
+    color: rgb(99, 75, 8);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.recetas h2{
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    color: rgb(70, 52, 4);
+    font-size: 3rem;
+}
+
+.recetas h3{
+    text-align: center;
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: rgb(99, 75, 8);
+    font-size: 2rem;
+    margin-top: 4rem;
+}
+
+.video1{
+    display: flex;
+    padding-top: 4rem;
+    padding-bottom: 13rem;
+    justify-content: center;
+}
+
+
+.contacto section h2{
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    color: rgb(70, 52, 4);
+    font-size: 3rem;
+    margin-top: 2rem;
+}
+
+.contacto section p{
+    text-align: center;
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: rgb(99, 75, 8);
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+
+.contacto section h3{
+    text-align: center;
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: rgb(99, 75, 8);
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.contacto section form fieldset{
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: rgb(99, 75, 8);
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.ubicacion{
+    display: flex;
+    justify-content: center;
+}
+
+/* selectores de id */
+
+#footer{
+    background-color: antiquewhite;
+    border-top: solid 0.2rem black;
+}
+.iconos{
+    margin-left: 2rem;
+}
+
+
+/* mobile first */
+.contenedor {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "nav"
+    "header"
+    "main"
+    "footer";
+}
+
+#Nav1{
+    grid-area: nav;
+}
+
+#header{
+    grid-area: header;
+}
+
+#main1{
+    grid-area: main;
+}
+
+#footer{
+    grid-area: footer;
+}
+
+/* media queries */
+
+@media (min-width: 600px){
+    .contenedor{
+        grid-template-columns: 40% 20% 40%;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "nav nav nav"
+        "header header header"
+        "main main main"
+        "footer footer footer";
+    }
+}
+
+/* mobile first para seccion contacto*/
+
+.contenedor2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "nav"
+    "main"
+    "footer";
+}
+
+#nav2 {
+    grid-area: nav;
+}
+
+#hero{
+    grid-area: main;
+}
+
+#footer{
+    grid-area: footer;
+}
+
+/* media querie para seccion contacto */
+
+@media (min-width: 600px){
+    .contenedor{
+        grid-template-columns: 40% 20% 40%;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "nav nav nav"
+        "main main main"
+        "footer footer footer";
+    }
+}
